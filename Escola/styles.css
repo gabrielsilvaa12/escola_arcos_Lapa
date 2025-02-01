@@ -93,7 +93,7 @@ nav a:hover {
 }
 
 .subtitulo {
-    color: purple;
+    color: #863CBF;
     font-size: 25px;
     text-transform: uppercase;
     text-align: center;
@@ -106,7 +106,7 @@ nav a:hover {
 }
 
 .titulo {
-    color: #6a5acd;
+    color: #5C2387;
     font-size: 28px;
     text-align: center;
     margin-bottom: 30px;
@@ -117,7 +117,6 @@ nav a:hover {
 }
 .texto {
     width: 70%;
-    /* margin-bottom: auto; */
     padding-right: 30px;
     font-size: 20px;
 }
@@ -134,3 +133,159 @@ nav a:hover {
     color: #555;
     font-size: 16px;
 }
+
+.cursos {
+    color: white;
+    padding: 20px;
+    margin-left: -20px;
+    padding: 20px 0;
+}
+
+.icons {
+    background-color: #863CBF;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+}
+
+.icons img {
+    width: 150px;
+    height: 150px;
+    padding-right: 20px;
+}
+
+.depoimentos {
+    padding: 20px;
+}
+
+.depoimentos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.depoimento {
+    max-width: 300px;
+    text-align: left;
+}
+
+.depoimento img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: #863CBF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #5C2387;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin: 5px 0;
+}
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.nav-bar nav ul li a.active {
+    background-color: #5C2387;
+    color: #fff;
+}
+
+.cursos .icons img {
+    transition: transform 0.3s ease;
+}
+
+.card {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+ 
+.card-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+ 
+.card-content h3 {
+    font-size: 24px;
+    color: #4b0082;
+    margin-bottom: 20px;
+}
+ 
+.card-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+ 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ 
+.btn-confirmar {
+    background-color: #4b0082;
+    color: #fff;
+}
+ 
+.btn-confirmar:hover {
+    background-color: #3d0066;
+}
+ 
+.btn-cancelar {
+    background-color: #ccc;
+    color: #333;
+}
+ 
+.btn-cancelar:hover {
+    background-color: #999;
+}
+
