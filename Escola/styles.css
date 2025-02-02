@@ -247,7 +247,7 @@ footer {
  
 .card-content h3 {
     font-size: 24px;
-    color: #4b0082;
+    color: #5C2387;
     margin-bottom: 20px;
 }
  
@@ -272,12 +272,12 @@ footer {
 }
  
 .btn-confirmar {
-    background-color: #4b0082;
+    background-color: #5C2387;
     color: #fff;
 }
  
 .btn-confirmar:hover {
-    background-color: #3d0066;
+    background-color: #5C2387;
 }
  
 .btn-cancelar {

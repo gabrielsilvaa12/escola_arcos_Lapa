@@ -7,7 +7,7 @@ document.querySelectorAll('.cursos .icons img').forEach(img => {
         this.style.transform = 'scale(1)';
     });
 });
-    // BARRA DE PESQUISA INTERATIVA
+
     document.getElementById("search-bar").addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
@@ -55,18 +55,17 @@ document.querySelectorAll('.cursos .icons img').forEach(img => {
         });
      
         btnCancelarFinal.addEventListener("click", () => {
-            cardConfirmacao.style.display = "none"; // Oculta o card
+            cardConfirmacao.style.display = "none"; 
         });
      
         btnConfirmarFinal.addEventListener("click", () => {
             alert("Inscrição realizada com sucesso!");
-            cardConfirmacao.style.display = "none"; // Oculta o card após a inscrição
+            cardConfirmacao.style.display = "none"; 
         });
      
         window.addEventListener("click", function (event) {
             if (event.target === cardConfirmacao) {
-                cardConfirmacao.style.display = "none"; // Oculta o card se clicar fora
+                cardConfirmacao.style.display = "none"; 
             }
         });
     });
-
