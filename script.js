@@ -1,71 +1,44 @@
-document.querySelectorAll('.cursos .icons img').forEach(img => {
-    img.addEventListener('mouseenter', function () {
-        this.style.transform = 'scale(1.1)';
-        this.style.transition = 'transform 0.3s';
-    });
-    img.addEventListener('mouseleave', function () {
-        this.style.transform = 'scale(1)';
-    });
+document.getElementById("menu-btn").addEventListener("click", function() {
+    let menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
 });
 
-    document.getElementById("search-bar").addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            alert("Você pesquisou por: " + this.value);
-            this.value = ""; 
-        }
-    })
+// Fecha o menu ao clicar fora
+document.addEventListener("click", function(event) {
+    let menu = document.getElementById("menu");
+    let button = document.getElementById("menu-btn");
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+        menu.style.display = "none";
+    }
+});
 
-    document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetID = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetID);
-     
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50, 
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+let index = 0;
 
-    document.addEventListener("DOMContentLoaded", function () {
-        
-        const cardConfirmacao = document.getElementById("card-confirmacao");
-        const btnConfirmarFinal = document.getElementById("confirmar-inscricao-final");
-        const btnCancelarFinal = document.getElementById("cancelar-inscricao-final");
-        const cursoSelecionado = document.getElementById("curso-selecionado");
-     
-        
-        cardConfirmacao.style.display = "none";
-     
-        
-        const cursos = document.querySelectorAll(".cursos .icons img");
-     
-        cursos.forEach((curso) => {
-            curso.addEventListener("click", function () {
-                
-                const nomeCurso = this.alt; 
-                cursoSelecionado.textContent = `Você tem certeza que deseja se inscrever no curso de ${nomeCurso}?`;
-                
-                cardConfirmacao.style.display = "flex";
-            });
-        });
-     
-        btnCancelarFinal.addEventListener("click", () => {
-            cardConfirmacao.style.display = "none"; 
-        });
-     
-        btnConfirmarFinal.addEventListener("click", () => {
-            alert("Inscrição realizada com sucesso!");
-            cardConfirmacao.style.display = "none"; 
-        });
-     
-        window.addEventListener("click", function (event) {
-            if (event.target === cardConfirmacao) {
-                cardConfirmacao.style.display = "none"; 
-            }
-        });
-    });
+function moveSlide(direction) {
+    const slides = document.querySelector(".carousel-container");
+    index += direction;
+
+    if (index > 2) index = 0;  // Volta para a primeira imagem
+    if (index < 0) index = 2;  // Vai para a última imagem
+
+    slides.style.transform = `translateX(${-index * 621}px)`;
+}
+
+setInterval(() => moveSlide(1), 3000);
+
+let indexo = 0;
+
+function mover(direcao) {
+    const container = document.querySelector('.carrossel-container');
+    const totalImagens = document.querySelectorAll('.carrossel img').length;
+
+    indexo += direcao;
+
+    if (indexo < 0) {
+        indexo = totalImagens - 5; // Volta para a última posição
+    } else if (indexo > totalImagens - 5) {
+        indexo = 0; // Volta para a primeira posição
+    }
+
+    container.style.transform = `translateX(-${index * 20}%)`; // 20% porque cada imagem ocupa 20%
+}
